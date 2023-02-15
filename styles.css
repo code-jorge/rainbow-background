@@ -1,0 +1,83 @@
+:root {
+  --portion: calc(100% / 19);
+  --color-rainbow-1: violet;
+  --color-rainbow-2: indigo;
+  --color-rainbow-3: blue;
+  --color-rainbow-4: green;
+  --color-rainbow-5: yellow;
+  --color-rainbow-6: orange;
+  --color-rainbow-7: red;
+  --font-size: 0;
+  --x: 50;
+  --y: 50;
+}
+
+* {
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.rainbow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--font-size) * 1px);
+  background: linear-gradient(
+    45deg, 
+    var(--color-rainbow-1) calc(0 * var(--portion)),
+    var(--color-rainbow-1) calc(1 * var(--portion) - 1px),
+    var(--color-rainbow-2) calc(1 * var(--portion)),
+    var(--color-rainbow-2) calc(2 * var(--portion) - 1px),
+    var(--color-rainbow-3) calc(2 * var(--portion)),
+    var(--color-rainbow-3) calc(3 * var(--portion) - 1px),
+    var(--color-rainbow-4) calc(3 * var(--portion)),
+    var(--color-rainbow-4) calc(4 * var(--portion) - 1px),
+    var(--color-rainbow-5) calc(4 * var(--portion)),
+    var(--color-rainbow-5) calc(5 * var(--portion) - 1px),
+    var(--color-rainbow-6) calc(5 * var(--portion)),
+    var(--color-rainbow-6) calc(6 * var(--portion) - 1px),
+    var(--color-rainbow-7) calc(6 * var(--portion)),
+    var(--color-rainbow-7) calc(7 * var(--portion) - 1px),
+    var(--color-rainbow-6) calc(7 * var(--portion)),
+    var(--color-rainbow-6) calc(8 * var(--portion) - 1px),
+    var(--color-rainbow-5) calc(8 * var(--portion)),
+    var(--color-rainbow-5) calc(9 * var(--portion) - 1px),
+    var(--color-rainbow-4) calc(9 * var(--portion)),
+    var(--color-rainbow-4) calc(10 * var(--portion) - 1px),
+    var(--color-rainbow-3) calc(10 * var(--portion)),
+    var(--color-rainbow-3) calc(11 * var(--portion) - 1px),
+    var(--color-rainbow-2) calc(11 * var(--portion)),
+    var(--color-rainbow-2) calc(12 * var(--portion) - 1px),
+    var(--color-rainbow-1) calc(12 * var(--portion)),
+    var(--color-rainbow-1) calc(13 * var(--portion) - 1px),
+    var(--color-rainbow-2) calc(13 * var(--portion)),
+    var(--color-rainbow-2) calc(14 * var(--portion) - 1px),
+    var(--color-rainbow-3) calc(14 * var(--portion)),
+    var(--color-rainbow-3) calc(15 * var(--portion) - 1px),
+    var(--color-rainbow-4) calc(15 * var(--portion)),
+    var(--color-rainbow-4) calc(16 * var(--portion) - 1px),
+    var(--color-rainbow-5) calc(16 * var(--portion)),
+    var(--color-rainbow-5) calc(17 * var(--portion) - 1px),
+    var(--color-rainbow-6) calc(17 * var(--portion)),
+    var(--color-rainbow-6) calc(18 * var(--portion) - 1px),
+    var(--color-rainbow-7) calc(18 * var(--portion)),
+    var(--color-rainbow-7) calc(19 * var(--portion))
+  );
+  background-size: 150% 150%;
+  background-repeat: repeat;
+  background-position: calc(var(--x) * 1%) calc(var(--y) * 1%);
+  user-select: none;
+}
