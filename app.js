@@ -14,7 +14,6 @@ const getCoordinates = ({ source, event })=> {
 }
 
 const updatePosition = (source)=> (event)=> {
-  const rainbow = document.querySelector(".rainbow")
   const { clientX, clientY } = getCoordinates({ source, event })
   const x = clientX / window.innerWidth
   const y = clientY / window.innerHeight
